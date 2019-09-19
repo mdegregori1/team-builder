@@ -1,47 +1,45 @@
 import React, { useState } from "react";
 
 const NameForm = props => {
-    const [name, setName] = useState({
+    const [teammate, setTeammate] = useState({
         name: "",
         email: "",
         role: ""
     });
     const handleChanges = e => {
-        setName({...name, [e.target.name]: e.target.value})
-        //if doesn't work, check here
+        setTeammate({...teammate, [e.target.name]: e.target.value})
     };
-    const submitName = e => {
+    const submitContact = e => {
         e.preventDefault();
-        props.addNewName(name);
-        //add in app.js
-        setName({name:"",email:"", role:""});
+        props.addNewContact(teammate);
+        setTeammate({name: "",email: "", role: ""});
     };
 
   return (
-    <form onSubmit={submitName}>
-      <label htmlFor="title">Name:</label>
+    <form onSubmit={submitContact}>
+      <label htmlFor="name">Name:</label>
       <input
-        id="title"
+        id="name"
         type="text"
-        name="title"
+        name="name"
         onChange={handleChanges}
-        value={name.name}
+        value={teammate.name}
       />
-      <label htmlFor="note">Email:</label>
+      <label htmlFor="email">Email:</label>
       <input
-        id="note"
+        id="email"
         type="text"
-        name="body"
+        name="email"
         onChange={handleChanges}
-        value={name.email}
+        value={teammate.email}
       />
-        <label htmlFor="title">Role:</label>
+      <label htmlFor="role">Role:</label>
       <input
-        id="title"
+        id="roe"
         type="text"
-        name="title"
+        name="role"
         onChange={handleChanges}
-        value={name.role}
+        value={teammate.role}
       />
       
       <button type="submit">Add</button>
