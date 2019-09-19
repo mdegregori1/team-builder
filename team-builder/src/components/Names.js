@@ -5,7 +5,8 @@ const Names = props => {
     return (
     <>
       {props.teammates.map(e => (
-        <div key={e.id}>
+    
+        <div className = "card" key={e.id}>
           <h1>{e.name}</h1>
           <h2>{e.email}</h2>
           <h2>{e.role}</h2>

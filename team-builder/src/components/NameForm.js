@@ -17,27 +17,30 @@ const NameForm = props => {
 
   return (
     <form onSubmit={submitContact}>
-      <label htmlFor="name">Name:</label>
+      <label htmlFor="name"></label>
       <input
         id="name"
         type="text"
         name="name"
+        placeholder="Full Name"
         onChange={handleChanges}
         value={teammate.name}
       />
-      <label htmlFor="email">Email:</label>
+      <label htmlFor="email"></label>
       <input
         id="email"
         type="text"
         name="email"
+        placeholder = "Email"
         onChange={handleChanges}
         value={teammate.email}
       />
-      <label htmlFor="role">Role:</label>
+      <label htmlFor="role"></label>
       <input
         id="roe"
         type="text"
         name="role"
+        placeholder = "Role"
         onChange={handleChanges}
         value={teammate.role}
       />
