@@ -26,7 +26,9 @@ function App() {
     <div className="App">
       <h1>Team Members</h1>
       <NameForm addNewContact = {addNewContact}/>
-      <Names teammates={teammates}/>
+      <div className = "memberlist">
+        <Names teammates={teammates}/>
+      </div>
     </div>
   );
 }
