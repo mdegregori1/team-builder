@@ -55,7 +55,8 @@ const Title = styled.h1`
 const Top = styled.div`
 height: 15vh;
 display: flex; 
-justify-content: center;
+flex-direction: column-reverse;
+justify-content: flex-end;
 align-items: center;
 color: #CD5C5C
 
