@@ -7,7 +7,7 @@ const Search = props => {
 
     useEffect(()=>{
         const results = props.members.filter(e =>
-            e.toLowerCase().includes(search.toLowerCase())
+            e.includes(search.toLowerCase())
             );
             setResults(results);
     }, [search]);
