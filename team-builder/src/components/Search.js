@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 const Search = props => {
     const [search, setSearch] = useState("");
     const [results, setResults] = useState([]);
-    console.log("test this shit", props);
+    console.log("test this", props);
 
-    useEffect(()=>{
-        const results = props.members.filter(e =>
-            e.includes(search.toLowerCase())
-            );
-            setResults(results);
-    }, [search]);
+    // useEffect(()=>{
+    //     const results = props.members.filter(event =>
+    //         event.toLowerCase().includes(search)
+    //         );
+    //         setResults(results);
+    // }, [search]);
     const handleChange = e => {
         setSearch(e.target.value);
 

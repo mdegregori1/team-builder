@@ -17,7 +17,7 @@ const TeamMembers = props => {
         props.addNewMember(add);
     }
     return (
-        <Form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <input 
             name="name" 
             id="name" 
@@ -39,13 +39,15 @@ const TeamMembers = props => {
             placeholder="role"
             value={add.role}
             onChange={handleChange}/>
-            <button type="submit">Add Member</button>
-        </Form>
+            <Button type="submit">Add Member</Button>
+        </form>
     )
 }
 
 export default TeamMembers;
 
-const Form = styled.form `
 
-`;//
+const Button = styled.button `
+background-color: #CD5C5C;
+color: #fff;
+`;

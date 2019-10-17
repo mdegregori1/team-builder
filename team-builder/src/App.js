@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Team Builder</h1>
+      <Title>Team Builder</Title>
       <Top>
         <Newsearch>
           <Search addNewMember={addNewMember} members={members}/>
@@ -48,18 +48,23 @@ function App() {
 
 export default App;
 
+const Title = styled.h1`
+
+`;
+
 const Top = styled.div`
-border: 1px solid black;
 height: 15vh;
 display: flex; 
 justify-content: center;
 align-items: center;
+color: #CD5C5C
+
 `;
 
 const Newsearch = styled.div`
-border: 1px solid black;
 padding: 1%;
 margin: 2%;
+
 `
 
 const Members = styled.div`
