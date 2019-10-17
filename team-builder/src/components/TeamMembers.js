@@ -9,6 +9,8 @@ const TeamMembers = props => {
     })
     const handleChange = e => {
         setAdd({...add, [e.target.name]:[e.target.value]})
+        //why is this set up this way???
+        //my thoughts -> it allows for us to grab data from the whole array - without it, we can't grab all entered fields and store it into state 
     }
     const handleSubmit = e => {
         e.preventDefault();
@@ -16,7 +18,6 @@ const TeamMembers = props => {
     }
     return (
         <Form onSubmit={handleSubmit}>
-            <label htmlFor="name">Name</label>
             <input 
             name="name" 
             id="name" 
@@ -24,7 +25,6 @@ const TeamMembers = props => {
             placeholder="name"
             value={add.name}
             onChange={handleChange}/>
-            <label htmlFor="email">Email</label>
             <input 
             name="email" 
             id="email" 
@@ -32,7 +32,6 @@ const TeamMembers = props => {
             placeholder="email"
             value={add.email}
             onChange={handleChange}/>
-            <label htmlFor="role">Role</label>
             <input 
             name="role" 
             id="role" 
